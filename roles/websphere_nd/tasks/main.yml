@@ -1,13 +1,7 @@
 ---
 # tasks file for websphere
 - name: install java sdk n was nd
-<<<<<<< HEAD
   shell: ./imcl install {{ java_sdk_package }} {{ was_nd_package }} -repositories {{ java_sdk_url }},{{ was_nd_url }} -acceptLicense -installationDirectory /opt/IBM/WebSphere/AppServer 
   args:
     chdir: "{{ ibmim_tools_source }}"
 
-=======
-    shell: ./imcl install "{{ java_sdk_package }}" "{{ was_nd_package }}" -repositories "{{ java_sdk_url }}","{{ was_nd_url }}" -acceptLicense 
-    args:
-      chdir: "{{ ibmim_tools_source }}"
->>>>>>> ebfae93cd7da70257ddf92b6e279edcb07c0c93e
