@@ -1,0 +1,4 @@
+---
+
+file_src: http://www.java2s.com/Code/JarDownload/test/test.jar.zip
+installable_apps_dir: /opt/IBM/WebSphere/AppServer/profiles/{{ app_server_name }}/installableApps

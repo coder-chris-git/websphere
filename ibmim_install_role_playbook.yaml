@@ -1,0 +1,11 @@
+---
+- name: IBM installation manager install
+  hosts: wasservers
+  become: true
+  roles:
+    - pre_req
+    - ibm_installation_manager_install
+    - websphere_na
+
+    
+     

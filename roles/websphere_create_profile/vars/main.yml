@@ -1,0 +1,10 @@
+---
+
+template_path: /opt/IBM/WebSphere/AppServer/profileTemplates/
+profile_path: /opt/IBM/WebSphere/AppServer/profiles/
+ports_file_ext: /properties/portdef.props
+node_ports_file_ext: /properties/nodeportdef.props
+tools_path: /opt/IBM/InstallationManager/eclipse/tools
+app_server_bin: /opt/IBM/WebSphere/AppServer/bin/
+
+

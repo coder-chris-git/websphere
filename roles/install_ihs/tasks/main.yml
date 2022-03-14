@@ -1,0 +1,5 @@
+---
+- name: install Package Util
+  shell: ./imcl install {{java_sdk_ihs_package}} {{ ibm_ihs_package }} -repositories {{ java_sdk_ihs_url }},{{ ibm_ihs_url }} -acceptLicense 
+  args:
+    chdir: "{{ ibmim_tools_source }}"

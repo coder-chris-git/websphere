@@ -1,0 +1,12 @@
+--- 
+- name: download jar file
+  get_url:
+    url: "{{ file_src }}"
+    dest: /bin
+    mode: 0755
+
+- name: unzip installer
+  unarchive:
+    src: /bin/test.jar.zip
+    dest: "{{ installable_apps_dir }}"
+    remote_src: yes

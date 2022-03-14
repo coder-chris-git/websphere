@@ -1,0 +1,43 @@
+---
+# tasks file for pre_req
+
+- name: create cell profile
+  shell: ./manageprofiles.sh 
+    -create 
+    -templatePath {{template_path}}cell/dmgr
+    -nodeProfilePath {{profile_path}}AppSrv01 
+    -profileName Dmgr001
+    -cellName Default01Cell 
+    -nodeName Default01Node 
+    -appServerNodeName federated_node_name
+  args:
+    chdir: "{{app_server_bin}}"
+
+
+- name: create app profile
+  shell: ./manageprofiles.sh 
+    -create 
+    -templatePath {{template_path}}cell/default
+    -dmgrProfilePath {{profile_path}}Dmgr001 
+    -portsFile {{profile_path}}Dmgr001{{ports_file_ext}} 
+    -nodePortsFile {{profile_path}}Dmgr001{{node_ports_file_ext}}
+    -profileName AppSrv01 
+    -cellName Default01Cell 
+    -nodeName Default01Node 
+    -appServerNodeName federated_node_name
+  args:
+    chdir: "{{app_server_bin}}"
+
+- name: start dmgr
+  shell: ./startManager.sh
+  args:
+    chdir: "{{app_server_bin}}"
+
+- name: start node
+  shell: ./startNode.sh
+  args:
+    chdir: /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin
+- name: start server
+  shell: ./startServer.sh server1
+  args:
+    chdir: /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin

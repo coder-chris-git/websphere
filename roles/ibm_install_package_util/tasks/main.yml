@@ -1,0 +1,5 @@
+---
+- name: install IHS
+  shell: ./imcl install {{ ibmim_package }} -repositories {{ ibmim_package_url }} -acceptLicense
+  args:
+    chdir: "{{ ibmim_tools_source }}"
