@@ -22,8 +22,3 @@
   shell: ./installc -log log_file -acceptLicense
   args:
     chdir: /etc
-<<<<<<< HEAD
-  
-=======
-  notify: save_credentials
->>>>>>> ebfae93cd7da70257ddf92b6e279edcb07c0c93e
