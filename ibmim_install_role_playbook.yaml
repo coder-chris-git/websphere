@@ -5,7 +5,8 @@
   roles:
     - pre_req
     - ibm_installation_manager_install
-    - websphere_na
+    - websphere_nd
+    - websphere_create_profile
 
     
      
